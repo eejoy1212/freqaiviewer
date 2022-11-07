@@ -5,11 +5,11 @@ function connect() {
   console.log('connected1');
 
   console.log('connected2');
-  client.publish('wonhee', 'Hello mqtt')
+  // client.publish('wonheeCXC', '안녕')
   console.log(`퍼블리싱`);
   
 
-  client.subscribe('wonhee', function (err) {
+  client.subscribe('wgs', function (err) {
   console.log(`섭스크라이브`);
     // if (!err) {
     //   client.publish('presence', 'Hello mqtt')

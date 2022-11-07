@@ -2,9 +2,10 @@
 // import { connect } from 'mqtt';
 import { Fragment, useEffect, useState } from 'react';
 import './App.css';
-import AppBar from './AppBar';
-import Contents from './Contents';
-import MqttComponent from './MqttComponent';
+import connect from './testmqtt';
+// import AppBar from './AppBar';
+// import Contents from './Contents';
+// import MqttComponent from './MqttComponent';
 // import connect from './testmqtt';
 
 // var mqtt    = require('mqtt');
@@ -38,16 +39,16 @@ export default  function App() {
   const [mesg, setMesg] = useState(<Fragment><em>nothing heard</em></Fragment>);
   const handleMqtt=()=>{
     console.log('connected1');
-  // const client = mqtt.connect('mqtt://127.0.0.1');
+  const client = mqtt.connect('mqtt://127.0.0.1:9001');
   //  var client  = mqtt.connect('mqtt://127.0.0.1:1883',options);
-  const client  = mqtt.connect('mqtt://test.mosquitto.org:8081', options);
+  // const client  = mqtt.connect('mqtt://test.mosquitto.org:8081', options);
   console.log('connected2');
 
   client.on('connect', function () {
     console.log('connected3');
-    client.subscribe('wonhee', function (err) {
+    client.subscribe('wgs', function (err) {
     if (!err) {
-      client.publish('wonhee', 'Hello mqtt')
+      client.publish('wgs', 'Hello mqtsacdcdzt')
     }
     })
 })
@@ -55,11 +56,13 @@ export default  function App() {
   client.on('message', function (topic, message) {
     note = message.toString();
     // Updates React state with message 
-    setMesg(note);
+   
     console.log(`>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>`);
     console.log(topic);
     console.log(note);
     console.log(`>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>`);
+     setMesg(note);
+    // setMesg()
     // client.end();
     });
   }
@@ -98,4 +101,3 @@ export default  function App() {
     </div>
   );
 }
-

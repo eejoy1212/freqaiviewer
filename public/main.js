@@ -15,7 +15,7 @@ function createWindow() {
  
    win.loadURL('http://localhost:3000')
 //    win.loadFile('index.html')
- connect();
+//  connect();
     remote.enable(win.webContents);
 }
  
