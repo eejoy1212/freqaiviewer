@@ -1,0 +1,104 @@
+
+.title{
+    /* display: flex; */
+    /* align-content: space-between; */
+    color: white;
+    display: flex;
+    /* padding: 6px; */
+    font-size: 14px;
+    border: 1px solid white;
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 4px;
+    /* padding-right: 4px; */
+    background-color: #1a1a1a;
+}
+.AlgorithmChart{
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+    /* display: flex; */
+    /* padding: 10px; */
+    /* height: 50vh; */
+    /* align-items: center; */
+    /* justify-content: center; */
+  }
+.titleName{padding-right: 30px;}
+.chip{
+    color: white;
+    font-size: 12;
+    background-color: #323232;
+    width: 46px;
+    height: 21px;
+    border-radius: 14px;
+    /* margin-left: 30px; */
+}
+.chartArea{
+    color: white;
+    height: 25.2vh;
+    /* width: 100px; */
+    
+    background-color: #1a1a1a;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    box-sizing: border-box;
+}
+.brushArea{
+    color: white;
+    /* height: 20vh; */
+    /* margin-top: 10px; */
+    width: 100%;
+    height:15vh;
+    background-color: #1a1a1a;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    box-sizing: border-box;
+    /* padding-right: 10px; */
+}
+.brushChart{
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    /* margin-left: 10px;
+    margin-right: 10px; */
+    /* height: 50vh; */
+}
+.open{
+    position: absolute;
+    right:10px;
+    width: 74%;
+}
+.colorSelector{
+    width:14px;
+    height:14px;
+    background-color: pink;
+    border-radius:20px ;
+    position: absolute;
+    right:54px;
+    top:5px;
+    border: none;
+    cursor: pointer;
+    /* bottom:238px */
+
+}
+.colorSelector:hover{
+
+}
+.filePath{
+    display: flex;
+   
+}
+.filePathTitle{
+    position: absolute;
+    right: 4px;
+}
+.filePathName{
+    padding-left: 4px;
+    display: flex;
+    background-color: #323232;
+    width: 228px;
+    border-radius: 14px;
+}
